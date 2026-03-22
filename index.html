@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rasi Tattva – The Living Cosmos</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════
+   UNIFIED STYLE — BLACK, WHITE & GOLD
+   Used across ALL parts of Rasi Tattva
+═══════════════════════════════════════════ */
+:root {
+  --bg:        #0a0a0a;
+  --bg2:       #111111;
+  --bg3:       #181818;
+  --gold:      #c9a84c;
+  --gold-lt:   #e8c97a;
+  --gold-dim:  rgba(201,168,76,0.18);
+  --white:     #f5f0e8;
+  --white-dim: rgba(245,240,232,0.7);
+  --muted:     #7a7060;
+  --border:    rgba(201,168,76,0.2);
+  --border-wk: rgba(255,255,255,0.06);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'Cormorant Garamond',Georgia,serif;
+  line-height:1.7;
+}
+
+/* ── PAGE WRAPPER ── */
+.page{
+  max-width:860px;
+  margin:0 auto;
+  padding:24px 20px;
+}
+
+/* ── PART DIVIDER (between merged parts) ── */
+.part-break{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:80px 0;
+  position:relative;
+}
+.part-break::after{
+  content:'✦';
+  position:absolute;
+  top:-10px;left:50%;
+  transform:translateX(-50%);
+  background:var(--bg);
+  padding:0 14px;
+  color:var(--gold);
+  font-size:14px;
+}
+
+/* ── HERO / COVER ── */
+.hero{
+  min-height:90vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:80px 20px 60px;
+}
+
+.hero-ring{
+  width:180px;height:180px;
+  border-radius:50%;
+  border:1px solid var(--gold);
+  box-shadow:0 0 50px rgba(201,168,76,0.12);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:48px;
+  position:relative;
+}
+.hero-ring::before{
+  content:'';position:absolute;inset:12px;
+  border-radius:50%;border:1px solid var(--border);
+}
+.hero-icon{font-size:64px;color:var(--gold);line-height:1;}
+
+.eyebrow{
+  font-family:'Raleway',sans-serif;
+  font-size:10px;letter-spacing:6px;
+  text-transform:uppercase;
+  color:var(--gold);opacity:.7;
+  margin-bottom:18px;
+}
+
+.book-title{
+  font-family:'Cinzel Decorative',serif;
+  font-size:clamp(30px,7vw,58px);
+  color:var(--gold-lt);
+  letter-spacing:3px;line-height:1.15;
+  margin-bottom:14px;
+}
+
+.book-sub{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;font-weight:300;
+  font-size:clamp(16px,2.5vw,22px);
+  color:var(--muted);
+  margin-bottom:48px;
+}
+
+/* ── SIGN HERO ── */
+.sign-hero{
+  text-align:center;
+  padding:80px 20px 50px;
+}
+.sign-symbol{
+  font-size:80px;line-height:1;
+  color:var(--gold);
+  text-shadow:0 0 40px rgba(201,168,76,0.3);
+  margin-bottom:20px;
+  display:block;
+}
+.sign-number{
+  font-family:'Raleway',sans-serif;
+  font-size:10px;letter-spacing:5px;
+  text-transform:uppercase;
+  color:var(--muted);margin-bottom:10px;
+}
+.sign-name{
+  font-family:'Cinzel Decorative',serif;
+  font-size:clamp(36px,8vw,68px);
+  color:var(--gold-lt);
+  letter-spacing:4px;line-height:1;
+  margin-bottom:14px;
+}
+.sign-tagline{
+  font-style:italic;font-weight:300;
+  font-size:clamp(15px,2.2vw,20px);
+  color:var(--muted);margin-bottom:28px;
+}
+.sign-intro{
+  font-size:clamp(15px,2vw,17px);
+  color:var(--white-dim);
+  max-width:640px;margin:0 auto;
+  line-height:1.9;
+}
+
+/* ── GOLD DIVIDER ── */
+.gdivider{
+  display:flex;align-items:center;gap:14px;
+  margin:48px 0;
+}
+.gdivider-line{
+  flex:1;height:1px;
+  background:linear-gradient(to right,transparent,var(--gold),transparent);
+  opacity:.3;
+}
+.gdivider-dot{
+  width:6px;height:6px;
+  background:var(--gold);
+  transform:rotate(45deg);flex-shrink:0;
+}
+
+/* ── SECTION ── */
+.section{padding:52px 0;border-bottom:1px solid var(--border-wk);}
+.section:last-child{border-bottom:none;}
+
+.sec-label{
+  font-family:'Raleway',sans-serif;
+  font-size:9px;letter-spacing:6px;
+  text-transform:uppercase;
+  color:var(--gold);opacity:.65;
+  margin-bottom:18px;
+}
+.sec-title{
+  font-family:'Cinzel Decorative',serif;
+  font-size:clamp(17px,3.2vw,26px);
+  color:var(--gold-lt);
+  margin-bottom:24px;line-height:1.3;
+}
+
+.body-text{
+  font-size:clamp(15px,1.9vw,17px);
+  color:var(--white-dim);
+  line-height:1.95;margin-bottom:18px;
+}
+.italic-note{
+  font-style:italic;font-weight:300;
+  font-size:clamp(16px,2.2vw,19px);
+  color:var(--gold-lt);
+  border-left:2px solid var(--gold);
+  padding:12px 0 12px 20px;
+  margin:24px 0;opacity:.9;
+}
+
+/* ── CORE GRID ── */
+.core-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:1px;background:var(--border);
+  border:1px solid var(--border);
+  margin:24px 0;
+}
+.core-cell{
+  background:var(--bg2);
+  padding:16px 14px;
+}
+.core-lbl{
+  font-family:'Raleway',sans-serif;
+  font-size:9px;letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--gold);opacity:.55;
+  margin-bottom:6px;
+}
+.core-val{font-size:15px;color:var(--white);}
+
+/* ── TATTVA GRID ── */
+.tattva-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:14px;margin:24px 0;
+}
+.tattva-card{
+  border:1px solid var(--border);
+  padding:18px 16px;
+  background:rgba(201,168,76,0.03);
+}
+.tattva-lbl{
+  font-family:'Raleway',sans-serif;
+  font-size:9px;letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--gold);opacity:.55;
+  margin-bottom:7px;
+}
+.tattva-val{font-size:14px;color:var(--white-dim);line-height:1.55;}
+
+/* ── CONDITION BOX ── */
+.cond-box{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:16px;margin:22px 0;
+}
+@media(max-width:480px){.cond-box{grid-template-columns:1fr;}}
+.cond-card{padding:18px;border:1px solid var(--border);}
+.cond-card.weak{border-left:3px solid rgba(255,255,255,0.2);}
+.cond-card.strong{border-left:3px solid var(--gold);}
+.cond-lbl{
+  font-family:'Raleway',sans-serif;
+  font-size:9px;letter-spacing:4px;
+  text-transform:uppercase;opacity:.6;
+  margin-bottom:8px;
+}
+.cond-card.weak .cond-lbl{color:var(--white);}
+.cond-card.strong .cond-lbl{color:var(--gold);}
+.cond-txt{font-size:14px;color:var(--white-dim);line-height:1.7;}
+
+/* ── LIST GROUP ── */
+.list-group{margin:22px 0;}
+.list-group-title{
+  font-family:'Cinzel Decorative',serif;
+  font-size:12px;color:var(--gold-lt);
+  letter-spacing:1px;margin-bottom:12px;
+  padding-bottom:7px;
+  border-bottom:1px solid rgba(201,168,76,0.12);
+}
+.items-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:6px;
+}
+.item-tag{
+  display:flex;align-items:flex-start;gap:9px;
+  font-size:14px;color:var(--white-dim);
+  line-height:1.5;padding:5px 0;
+}
+.item-tag::before{
+  content:'▸';color:var(--gold);
+  font-size:9px;margin-top:4px;
+  flex-shrink:0;opacity:.6;
+}
+
+/* ── TRANSITION TABLE ── */
+.trans-table{
+  width:100%;border-collapse:collapse;
+  margin:22px 0;font-size:14px;
+}
+.trans-table th{
+  font-family:'Raleway',sans-serif;
+  font-size:9px;letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--gold);opacity:.6;
+  padding:11px 14px;text-align:left;
+  border-bottom:1px solid var(--border);
+  background:rgba(201,168,76,0.04);
+}
+.trans-table td{
+  padding:10px 14px;
+  border-bottom:1px solid var(--border-wk);
+  color:var(--white-dim);vertical-align:top;
+}
+.trans-table tr:hover td{background:rgba(201,168,76,0.04);}
+.arr{color:var(--gold);opacity:.4;text-align:center;width:36px;}
+
+/* ── FORCE PILLS ── */
+.force-section{margin:22px 0;}
+.force-cat{margin-bottom:22px;}
+.force-cat-title{
+  font-family:'Raleway',sans-serif;
+  font-size:9px;letter-spacing:5px;
+  text-transform:uppercase;
+  color:var(--gold);opacity:.55;
+  margin-bottom:12px;
+}
+.force-pills{display:flex;flex-wrap:wrap;gap:8px;}
+.pill{
+  padding:5px 14px;
+  border:1px solid var(--border);
+  font-size:13px;color:var(--white-dim);
+  background:rgba(201,168,76,0.04);
+}
+
+/* ── ESSENCE BOX ── */
+.essence-box{
+  text-align:center;padding:44px 28px;
+  border:1px solid var(--border);
+  margin:44px 0;
+  background:rgba(201,168,76,0.03);
+  position:relative;
+}
+.essence-box::before{
+  content:'ONE-LINE ESSENCE';
+  position:absolute;top:-9px;left:50%;
+  transform:translateX(-50%);
+  white-space:nowrap;
+  background:var(--bg);padding:0 14px;
+  font-family:'Raleway',sans-serif;
+  font-size:9px;letter-spacing:4px;
+  color:var(--gold);opacity:.7;
+}
+.essence-txt{
+  font-family:'Cinzel Decorative',serif;
+  font-size:clamp(13px,2.2vw,18px);
+  color:var(--gold-lt);line-height:1.7;
+}
+
+/* ── FRAMEWORK CARDS ── */
+.fw-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:16px;margin:32px 0;
+}
+.fw-card{
+  border:1px solid var(--border);
+  padding:22px 18px;text-align:center;
+  background:rgba(201,168,76,0.03);
+}
+.fw-icon{font-size:26px;margin-bottom:10px;display:block;}
+.fw-title{
+  font-family:'Cinzel Decorative',serif;
+  font-size:11px;letter-spacing:2px;
+  color:var(--gold);margin-bottom:7px;
+}
+.fw-desc{font-size:13px;color:var(--muted);line-height:1.55;}
+
+/* ── SIGNS GRID ── */
+.signs-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin:28px 0;
+}
+@media(max-width:560px){.signs-grid{grid-template-columns:repeat(2,1fr);}}
+.sign-pill-sm{
+  display:flex;align-items:center;gap:8px;
+  padding:11px 14px;
+  border:1px solid var(--border-wk);
+  background:var(--bg2);
+}
+.sp-num{
+  font-family:'Cinzel Decorative',serif;
+  font-size:9px;color:var(--gold);opacity:.5;min-width:16px;
+}
+.sp-name{font-size:14px;color:var(--white);}
+.sp-ruler{font-size:12px;color:var(--muted);font-style:italic;margin-left:auto;}
+
+/* ── PLANETS LIST ── */
+.planets-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:14px;margin:24px 0;
+}
+.planet-item{
+  padding:14px 16px;
+  border-left:2px solid var(--gold);
+  background:rgba(201,168,76,0.03);
+}
+.planet-name{
+  font-family:'Cinzel Decorative',serif;
+  font-size:12px;color:var(--gold-lt);margin-bottom:5px;
+}
+.planet-theme{font-size:12px;color:var(--muted);line-height:1.5;}
+
+/* ── LAYERS BOX ── */
+.layers-box{
+  border:1px solid var(--border);
+  padding:32px;margin:32px 0;
+  background:rgba(201,168,76,0.03);
+  position:relative;
+}
+.layers-box::before{
+  content:'THE FOUR LAYERS';
+  position:absolute;top:-9px;left:28px;
+  background:var(--bg);padding:0 12px;
+  font-family:'Raleway',sans-serif;
+  font-size:9px;letter-spacing:4px;
+  color:var(--gold);
+}
+.layer-row{display:flex;gap:18px;align-items:flex-start;margin-bottom:22px;}
+.layer-row:last-child{margin-bottom:0;}
+.layer-num{
+  font-family:'Cinzel Decorative',serif;
+  font-size:26px;color:rgba(201,168,76,0.15);
+  min-width:38px;line-height:1;margin-top:2px;
+}
+.layer-title{
+  font-family:'Cinzel Decorative',serif;
+  font-size:12px;color:var(--gold);
+  margin-bottom:5px;letter-spacing:1px;
+}
+.layer-desc{font-size:14px;color:var(--white-dim);line-height:1.7;}
+
+/* ── HOW TO USE ── */
+.steps{counter-reset:steps;margin:26px 0;}
+.step{
+  counter-increment:steps;
+  display:flex;gap:18px;
+  margin-bottom:24px;align-items:flex-start;
+}
+.step::before{
+  content:counter(steps);
+  font-family:'Cinzel Decorative',serif;
+  font-size:18px;color:var(--gold);opacity:.45;
+  min-width:28px;margin-top:2px;
+}
+.step-txt{font-size:15px;line-height:1.8;color:var(--white-dim);}
+.step-txt strong{color:var(--gold-lt);font-weight:600;}
+
+/* ── CLOSING ── */
+.closing{text-align:center;padding:70px 20px;}
+.closing-verse{
+  font-style:italic;font-weight:300;
+  font-size:clamp(15px,2.2vw,20px);
+  color:var(--white-dim);line-height:2.1;
+  max-width:560px;margin:0 auto 36px;
+}
+.next-label{
+  font-family:'Raleway',sans-serif;
+  font-size:10px;letter-spacing:5px;
+  text-transform:uppercase;
+  color:var(--muted);margin-bottom:12px;
+}
+.next-name{
+  font-family:'Cinzel Decorative',serif;
+  font-size:clamp(18px,3.5vw,28px);
+  color:var(--gold-lt);opacity:.5;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ████████████████████████████████████████
+     PART 1 — INTRODUCTION
+████████████████████████████████████████ -->
+
+<div class="hero">
+  <div class="hero-ring"><span class="hero-icon">☸</span></div>
+  <div class="eyebrow">A Complete Reference Guide to KP Astrology Symbolism</div>
+  <h1 class="book-title">Rasi Tattva</h1>
+  <p class="book-sub">The Living Cosmos — Signs, Planets &amp; Their Expressions</p>
+  <div class="gdivider"><div class="gdivider-line"></div><div class="gdivider-dot"></div><div class="gdivider-line"></div></div>
+  <div class="eyebrow" style="margin-bottom:0;">Based on KP Astrology &amp; Vedic Tattva Shastra</div>
+</div>
+
+<!-- About -->
+<div class="section">
+  <div class="sec-label">About This Book</div>
+  <h2 class="sec-title">What Is Rasi Tattva?</h2>
+  <p class="body-text">Every sign of the zodiac is not merely a symbol on a chart — it is a living principle, a cosmic category that classifies all of existence: the beings that breathe, the objects that serve, the forces that move invisibly, and the instincts that drive action.</p>
+  <p class="body-text"><em>Rasi Tattva</em> is a comprehensive reference that maps all twelve zodiac signs — plus the planets Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn, Rahu, and Ketu — across four dimensions of reality. For each sign and planet, you will find what it represents in living beings, in non-living matter, in the boundary between the two, and in the purely abstract realm of forces and principles.</p>
+  <div class="italic-note">"The universe does not merely reflect the zodiac — the zodiac is the universe, categorized and named."</div>
+  <p class="body-text">This system is rooted in the ancient Vedic understanding that all creation falls within the domain of the twelve Rasis and the nine Grahas. A soldier and a sword, a fever and a furnace, courage and a cutting blade — all belong to Aries. A lotus and a lake, a mother's love and a cooking vessel — all belong to Cancer. When you understand which cosmic principle governs a thing, you begin to see the universe as a unified, intelligible whole.</p>
+</div>
+
+<!-- Purpose -->
+<div class="section">
+  <div class="sec-label">Why This Book</div>
+  <h2 class="sec-title">The Purpose of This Classification</h2>
+  <p class="body-text">Traditional astrology texts name planets and their qualities, but rarely explain <em>why</em> Mars rules both blood and iron, both a warrior and a forge, both anger and a surgeon's blade. The reason lies in Tattva — the essential principle underlying all forms. This book bridges that gap.</p>
+  <div class="fw-grid">
+    <div class="fw-card"><span class="fw-icon">🔭</span><div class="fw-title">KP Astrologers</div><div class="fw-desc">Deepen Karakatwa knowledge for accurate house &amp; planet interpretation</div></div>
+    <div class="fw-card"><span class="fw-icon">📚</span><div class="fw-title">Students</div><div class="fw-desc">Build a clear, structured foundation in Rasi symbolism from the ground up</div></div>
+    <div class="fw-card"><span class="fw-icon">🧘</span><div class="fw-title">Spiritual Seekers</div><div class="fw-desc">Understand how cosmic archetypes manifest in the world of matter and mind</div></div>
+    <div class="fw-card"><span class="fw-icon">🌿</span><div class="fw-title">Curious Minds</div><div class="fw-desc">Explore the hidden order beneath everyday objects, animals, and human roles</div></div>
+  </div>
+</div>
+
+<!-- Four Layers -->
+<div class="section">
+  <div class="sec-label">Book Structure</div>
+  <h2 class="sec-title">The Four-Layer Framework</h2>
+  <p class="body-text">Each sign and planet is explored through a consistent four-layer framework, revealing how a single cosmic principle expresses itself from the most physical to the most subtle dimensions of reality.</p>
+  <div class="layers-box">
+    <div class="layer-row"><div class="layer-num">I</div><div><div class="layer-title">Living Things</div><div class="layer-desc">Humans, animals, birds, insects, and plants that embody the sign's energy — soldiers for Aries, farmers for Taurus, scholars for Gemini.</div></div></div>
+    <div class="layer-row"><div class="layer-num">II</div><div><div class="layer-title">Non-Living Things</div><div class="layer-desc">Objects, tools, structures, and materials that carry the sign's nature — weapons for Aries, gold for Taurus, books for Gemini.</div></div></div>
+    <div class="layer-row"><div class="layer-num">III</div><div><div class="layer-title">Both Living &amp; Non-Living</div><div class="layer-desc">The transition zone — how living beings produce non-living objects, and how the sign governs that act of transformation and production.</div></div></div>
+    <div class="layer-row"><div class="layer-num">IV</div><div><div class="layer-title">Neither Living Nor Non-Living</div><div class="layer-desc">Abstract forces, psychological states, instincts, and invisible principles — the urge to act (Aries), desire for beauty (Taurus), flow of intelligence (Gemini).</div></div></div>
+  </div>
+</div>
+
+<!-- Contents -->
+<div class="section">
+  <div class="sec-label">Contents Overview</div>
+  <h2 class="sec-title">The Twelve Signs</h2>
+  <div class="signs-grid">
+    <div class="sign-pill-sm"><span class="sp-num">01</span><span class="sp-name">Aries</span><span class="sp-ruler">Mars</span></div>
+    <div class="sign-pill-sm"><span class="sp-num">02</span><span class="sp-name">Taurus</span><span class="sp-ruler">Venus</span></div>
+    <div class="sign-pill-sm"><span class="sp-num">03</span><span class="sp-name">Gemini</span><span class="sp-ruler">Mercury</span></div>
+    <div class="sign-pill-sm"><span class="sp-num">04</span><span class="sp-name">Cancer</span><span class="sp-ruler">Moon</span></div>
+    <div class="sign-pill-sm"><span class="sp-num">05</span><span class="sp-name">Leo</span><span class="sp-ruler">Sun</span></div>
+    <div class="sign-pill-sm"><span class="sp-num">06</span><span class="sp-name">Virgo</span><span class="sp-ruler">Mercury</span></div>
+    <div class="sign-pill-sm"><span class="sp-num">07</span><span class="sp-name">Libra</span><span class="sp-ruler">Venus</span></div>
+    <div class="sign-pill-sm"><span class="sp-num">08</span><span class="sp-name">Scorpio</span><span class="sp-ruler">Mars</span></div>
+    <div class="sign-pill-sm"><span class="sp-num">09</span><span class="sp-name">Sagittarius</span><span class="sp-ruler">Jupiter</span></div>
+    <div class="sign-pill-sm"><span class="sp-num">10</span><span class="sp-name">Capricorn</span><span class="sp-ruler">Saturn</span></div>
+    <div class="sign-pill-sm"><span class="sp-num">11</span><span class="sp-name">Aquarius</span><span class="sp-ruler">Saturn</span></div>
+    <div class="sign-pill-sm"><span class="sp-num">12</span><span class="sp-name">Pisces</span><span class="sp-ruler">Jupiter</span></div>
+  </div>
+  <h2 class="sec-title" style="margin-top:40px;">The Nine Planets</h2>
+  <div class="planets-list">
+    <div class="planet-item"><div class="planet-name">Sun</div><div class="planet-theme">Soul · Authority · Vitality</div></div>
+    <div class="planet-item"><div class="planet-name">Moon</div><div class="planet-theme">Mind · Emotion · Nurturing</div></div>
+    <div class="planet-item"><div class="planet-name">Mercury</div><div class="planet-theme">Intellect · Communication · Trade</div></div>
+    <div class="planet-item"><div class="planet-name">Venus</div><div class="planet-theme">Beauty · Love · Pleasure</div></div>
+    <div class="planet-item"><div class="planet-name">Mars</div><div class="planet-theme">Energy · Courage · Action</div></div>
+    <div class="planet-item"><div class="planet-name">Jupiter</div><div class="planet-theme">Wisdom · Dharma · Expansion</div></div>
+    <div class="planet-item"><div class="planet-name">Saturn</div><div class="planet-theme">Time · Karma · Discipline</div></div>
+    <div class="planet-item"><div class="planet-name">Rahu</div><div class="planet-theme">Illusion · Obsession · Technology</div></div>
+    <div class="planet-item"><div class="planet-name">Ketu</div><div class="planet-theme">Detachment · Spirituality · Past</div></div>
+  </div>
+</div>
+
+<!-- How to Use -->
+<div class="section">
+  <div class="sec-label">Reader's Guide</div>
+  <h2 class="sec-title">How to Use This Book</h2>
+  <div class="steps">
+    <div class="step"><div class="step-txt"><strong>Start with Core Nature.</strong> Before exploring the four layers of any sign, read its fundamental qualities — element, ruling planet, direction, Varna, and body parts. This gives you the root of all that follows.</div></div>
+    <div class="step"><div class="step-txt"><strong>Follow the Tattva Summary.</strong> The eight-point summary (Life Force → Shadow) gives a rapid snapshot of how the sign operates across all dimensions. Memorize these to build fast intuition.</div></div>
+    <div class="step"><div class="step-txt"><strong>Use Layer IV for deep analysis.</strong> The "Neither Living Nor Non-Living" layer contains the invisible essence — the psychological force or principle that animates everything else. Most useful for natal chart and psychological interpretation.</div></div>
+    <div class="step"><div class="step-txt"><strong>Cross-reference signs with planets.</strong> Many themes appear in both a sign chapter and its ruler's planet chapter. Read both together — Aries + Mars creates the fullest picture of martial energy.</div></div>
+    <div class="step"><div class="step-txt"><strong>Apply to KP analysis.</strong> When analyzing a house, check both the sign occupying it and its lord's planet chapter. The overlap reveals the true, layered meaning of any planet-house-sign combination.</div></div>
+  </div>
+</div>
+
+<hr class="part-break">
+
+<!-- ████████████████████████████████████████
+     PART 2 — ARIES
+████████████████████████████████████████ -->
+
+<div class="sign-hero">
+  <div class="eyebrow">Rasi Tattva · Sign 01</div>
+  <span class="sign-symbol">♈</span>
+  <div class="sign-number">Movable · Fire · Ruled by Mars · Dharma Rasi</div>
+  <h2 class="sign-name">Aries</h2>
+  <p class="sign-tagline">Meesham — The Ram — The Spark Before Form</p>
+  <p class="sign-intro">A Movable Fire sign ruled by Mars. Aries represents energy, initiative, courage, leadership, action, warfare, speed, and raw power — especially tools and objects used to start, cut, strike, protect, or lead.</p>
+</div>
+
+<div class="section">
+  <div class="sec-label">Core Nature</div>
+  <h2 class="sec-title">Fundamental Qualities</h2>
+  <div class="core-grid">
+    <div class="core-cell"><div class="core-lbl">Rasi Type</div><div class="core-val">Movable Sign</div></div>
+    <div class="core-cell"><div class="core-lbl">Element</div><div class="core-val">Fire</div></div>
+    <div class="core-cell"><div class="core-lbl">Gender</div><div class="core-val">Male</div></div>
+    <div class="core-cell"><div class="core-lbl">Ruling Planet</div><div class="core-val">Mars</div></div>
+    <div class="core-cell"><div class="core-lbl">Direction</div><div class="core-val">East</div></div>
+    <div class="core-cell"><div class="core-lbl">Life Class</div><div class="core-val">Dharma Rasi</div></div>
+    <div class="core-cell"><div class="core-lbl">Varna</div><div class="core-val">Kshatriya</div></div>
+    <div class="core-cell"><div class="core-lbl">Body Parts</div><div class="core-val">Head · Face</div></div>
+    <div class="core-cell"><div class="core-lbl">Life-form</div><div class="core-val">Four-legged (Ram)</div></div>
+    <div class="core-cell"><div class="core-lbl">Symbol</div><div class="core-val">The Ram</div></div>
+  </div>
+  <div class="italic-note">Duty, righteousness, leadership, action aligned with purpose — Aries initiates the zodiacal cycle.</div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Eight-Dimensional Tattva</div>
+  <h2 class="sec-title">Life Force to Shadow</h2>
+  <div class="tattva-grid">
+    <div class="tattva-card"><div class="tattva-lbl">Life Force</div><div class="tattva-val">Explosive, high-energy vitality</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Matter</div><div class="tattva-val">Weapons, metals, tools, machinery</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Fame</div><div class="tattva-val">Bravery, pioneering reputation</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Mind</div><div class="tattva-val">Quick thinking, impulsive decisions</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Action</div><div class="tattva-val">Immediate action, direct execution</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Purpose</div><div class="tattva-val">Initiation, leadership, victory through effort</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Time</div><div class="tattva-val">Fast results, short cycles</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Shadow</div><div class="tattva-val">Anger, impatience, recklessness</div></div>
+  </div>
+  <div class="cond-box">
+    <div class="cond-card weak"><div class="cond-lbl">If Mars is Weak</div><div class="cond-txt">Anger without achievement. Energy turns inward as frustration — action without direction.</div></div>
+    <div class="cond-card strong"><div class="cond-lbl">If Mars is Strong</div><div class="cond-txt">Leadership, conquest, fearlessness. The pioneer who breaks ground that others follow.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer I</div>
+  <h2 class="sec-title">Living Things</h2>
+  <p class="body-text">Fast, aggressive, territorial, fearless, action-first, combat-ready — they initiate, they do not wait.</p>
+  <div class="list-group"><div class="list-group-title">Humans</div><div class="items-grid">
+    <div class="item-tag">Soldiers, warriors, commandos</div>
+    <div class="item-tag">Police, guards, bouncers</div>
+    <div class="item-tag">Athletes, sprinters, fighters</div>
+    <div class="item-tag">Boxers, martial artists</div>
+    <div class="item-tag">Firefighters</div>
+    <div class="item-tag">Adventurers, mountaineers</div>
+    <div class="item-tag">Mechanics, metal workers</div>
+    <div class="item-tag">Construction workers</div>
+    <div class="item-tag">Pioneers, explorers</div>
+    <div class="item-tag">Aggressive leaders, initiators</div>
+    <div class="item-tag">Young males, high-energy youth</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Animals</div><div class="items-grid">
+    <div class="item-tag">Ram, goat (primary symbol)</div>
+    <div class="item-tag">Bull (when aggressive)</div>
+    <div class="item-tag">Horse (speed, power)</div>
+    <div class="item-tag">Guard dogs</div>
+    <div class="item-tag">Roosters (dominance, dawn)</div>
+    <div class="item-tag">Wild boar (attack nature)</div>
+    <div class="item-tag">Deer (sudden movement)</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Birds · Reptiles · Insects</div><div class="items-grid">
+    <div class="item-tag">Rooster</div>
+    <div class="item-tag">Eagle (attack &amp; dominance)</div>
+    <div class="item-tag">Venomous snakes</div>
+    <div class="item-tag">Scorpions</div>
+    <div class="item-tag">Bees, wasps (attack in groups)</div>
+    <div class="item-tag">Ants (aggressive workers)</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Plants &amp; Trees</div><div class="items-grid">
+    <div class="item-tag">Chili plants</div>
+    <div class="item-tag">Thorny plants, cacti</div>
+    <div class="item-tag">Plants with sharp spikes</div>
+    <div class="item-tag">Pepper, mustard (heat-producing)</div>
+    <div class="item-tag">Trees with hard wood or thorns</div>
+  </div></div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer II</div>
+  <h2 class="sec-title">Non-Living Things</h2>
+  <p class="body-text">Aries objects are active, sharp, force-driven, and initiation-oriented. They act first.</p>
+  <div class="items-grid">
+    <div class="item-tag">Weapons — swords, knives, spears</div>
+    <div class="item-tag">Shields, protective gear</div>
+    <div class="item-tag">Hammer, axe, chisel</div>
+    <div class="item-tag">Fire sources — matches, furnaces</div>
+    <div class="item-tag">Arrows, javelins</div>
+    <div class="item-tag">Alarms, sirens</div>
+    <div class="item-tag">Gym equipment, weights</div>
+    <div class="item-tag">Fast vehicles, motorcycles, engines</div>
+    <div class="item-tag">Military equipment, helmets</div>
+    <div class="item-tag">Fire extinguishers</div>
+    <div class="item-tag">Cutting instruments — blades, saws</div>
+    <div class="item-tag">Starting flags, signal lights</div>
+    <div class="item-tag">Explosives, detonators</div>
+    <div class="item-tag">Ladders (upward initiative)</div>
+    <div class="item-tag">Construction tools — drills, breakers</div>
+    <div class="item-tag">Iron grills, steel structures</div>
+    <div class="item-tag">Commander's chair, leader's desk</div>
+    <div class="item-tag">Megaphones, announcement devices</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer III</div>
+  <h2 class="sec-title">Both Living &amp; Non-Living — The Transition</h2>
+  <p class="body-text">Aries rules the transition from Life → Action → Object. Mars governs surgery (living → cutting tool), war (people → weapons), and engineering (idea → machine).</p>
+  <table class="trans-table">
+    <thead><tr><th>Living Being</th><th class="arr"></th><th>Produces / Becomes</th></tr></thead>
+    <tbody>
+      <tr><td>Soldier</td><td class="arr">↔</td><td>Weapon / Uniform</td></tr>
+      <tr><td>Athlete</td><td class="arr">↔</td><td>Sports equipment</td></tr>
+      <tr><td>Firefighter</td><td class="arr">↔</td><td>Fire tools</td></tr>
+      <tr><td>Mechanic</td><td class="arr">↔</td><td>Engine / Tools</td></tr>
+      <tr><td>Construction worker</td><td class="arr">↔</td><td>Machinery</td></tr>
+      <tr><td>Leader</td><td class="arr">↔</td><td>Throne / Command chair</td></tr>
+      <tr><td>Ram / Goat</td><td class="arr">↔</td><td>Leather, horns</td></tr>
+      <tr><td>Horse</td><td class="arr">↔</td><td>Saddle, carriage</td></tr>
+      <tr><td>Chili plant</td><td class="arr">↔</td><td>Dried chili powder, heat medicine</td></tr>
+      <tr><td>Iron ore (natural)</td><td class="arr">↔</td><td>Iron tools, steel weapons</td></tr>
+      <tr><td>Fire (living force)</td><td class="arr">↔</td><td>Lamp, furnace, engine (tool)</td></tr>
+      <tr><td>Muscle power</td><td class="arr">↔</td><td>Mechanical force</td></tr>
+    </tbody>
+  </table>
+  <div class="italic-note">Aries connects the living force to the non-living instrument.</div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer IV — The Invisible Realm</div>
+  <h2 class="sec-title">Neither Living Nor Non-Living</h2>
+  <p class="body-text">Aries rules the spark before form — before a being acts, before a weapon is lifted, before fire is seen. That invisible push is Aries.</p>
+  <div class="force-section">
+    <div class="force-cat"><div class="force-cat-title">Energetic Forces</div><div class="force-pills"><span class="pill">Raw energy</span><span class="pill">Heat principle</span><span class="pill">Vital force surge</span><span class="pill">Adrenaline rush</span><span class="pill">Testosterone drive</span></div></div>
+    <div class="force-cat"><div class="force-cat-title">Instincts &amp; Impulses</div><div class="force-pills"><span class="pill">Fight instinct</span><span class="pill">Survival reflex</span><span class="pill">Attack response</span><span class="pill">Fearlessness impulse</span><span class="pill">Competitive urge</span></div></div>
+    <div class="force-cat"><div class="force-cat-title">Psychological States</div><div class="force-pills"><span class="pill">Courage</span><span class="pill">Anger</span><span class="pill">Aggression</span><span class="pill">Impulsiveness</span><span class="pill">Assertiveness</span><span class="pill">Willpower to act</span></div></div>
+    <div class="force-cat"><div class="force-cat-title">Functional Principles</div><div class="force-pills"><span class="pill">Initiative</span><span class="pill">First move</span><span class="pill">Action trigger</span><span class="pill">Leadership spark</span><span class="pill">Command impulse</span></div></div>
+    <div class="force-cat"><div class="force-cat-title">Time &amp; Motion</div><div class="force-pills"><span class="pill">Beginnings</span><span class="pill">Sudden events</span><span class="pill">Immediate reaction</span><span class="pill">Speed principle</span><span class="pill">Acceleration</span></div></div>
+    <div class="force-cat"><div class="force-cat-title">Conceptual Domains</div><div class="force-pills"><span class="pill">War as an idea</span><span class="pill">Conflict as a state</span><span class="pill">Challenge</span><span class="pill">Risk-taking</span><span class="pill">Victory drive</span></div></div>
+  </div>
+</div>
+
+<div class="essence-box"><div class="essence-txt">Aries governs the urge to act —<br>which is neither life nor matter.</div></div>
+
+<hr class="part-break">
+
+<!-- ████████████████████████████████████████
+     PART 3 — TAURUS
+████████████████████████████████████████ -->
+
+<div class="sign-hero">
+  <div class="eyebrow">Rasi Tattva · Sign 02</div>
+  <span class="sign-symbol">♉</span>
+  <div class="sign-number">Fixed · Earth · Ruled by Venus · Karma Rasi</div>
+  <h2 class="sign-name">Taurus</h2>
+  <p class="sign-tagline">Rishabam — The Bull — The Ground Beneath All Growth</p>
+  <p class="sign-intro">A Fixed Earth sign ruled by Venus. Taurus represents stability, nourishment, fertility, beauty, patience, and preservation — living beings that sustain, produce, nurture, or provide material value.</p>
+</div>
+
+<div class="section">
+  <div class="sec-label">Core Nature</div>
+  <h2 class="sec-title">Fundamental Qualities</h2>
+  <div class="core-grid">
+    <div class="core-cell"><div class="core-lbl">Rasi Type</div><div class="core-val">Fixed Sign</div></div>
+    <div class="core-cell"><div class="core-lbl">Element</div><div class="core-val">Earth</div></div>
+    <div class="core-cell"><div class="core-lbl">Gender</div><div class="core-val">Female</div></div>
+    <div class="core-cell"><div class="core-lbl">Ruling Planet</div><div class="core-val">Venus</div></div>
+    <div class="core-cell"><div class="core-lbl">Direction</div><div class="core-val">South</div></div>
+    <div class="core-cell"><div class="core-lbl">Life Class</div><div class="core-val">Karma Rasi</div></div>
+    <div class="core-cell"><div class="core-lbl">Varna</div><div class="core-val">Vaishya</div></div>
+    <div class="core-cell"><div class="core-lbl">Body Parts</div><div class="core-val">Eyes · Ears · Nose · Mouth · Throat</div></div>
+    <div class="core-cell"><div class="core-lbl">Life-form</div><div class="core-val">Four-legged (Cattle)</div></div>
+    <div class="core-cell"><div class="core-lbl">Symbol</div><div class="core-val">The Bull</div></div>
+  </div>
+  <div class="italic-note">Wealth, land, food, comfort, life security — Taurus is the Karma Rasi of material stability and sensory fulfillment.</div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Eight-Dimensional Tattva</div>
+  <h2 class="sec-title">Life Force to Shadow</h2>
+  <div class="tattva-grid">
+    <div class="tattva-card"><div class="tattva-lbl">Life Force</div><div class="tattva-val">Stable and sustained vital energy</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Matter</div><div class="tattva-val">Land, house, property, gold</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Fame</div><div class="tattva-val">Trustworthiness, long-lasting reputation</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Mind</div><div class="tattva-val">Practical, slow but firm decision-making</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Action</div><div class="tattva-val">Continuous, disciplined effort</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Purpose</div><div class="tattva-val">Financial security and family stability</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Time</div><div class="tattva-val">Slow growth with long-term results</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Shadow</div><div class="tattva-val">Stubbornness, resistance to change</div></div>
+  </div>
+  <div class="cond-box">
+    <div class="cond-card weak"><div class="cond-lbl">If Venus is Weak</div><div class="cond-txt">Materialism without satisfaction. Greed, possessiveness, inability to enjoy what is accumulated.</div></div>
+    <div class="cond-card strong"><div class="cond-lbl">If Venus is Strong</div><div class="cond-txt">Prosperity, aesthetic mastery, deep contentment. The builder who creates lasting beauty and wealth.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer I</div>
+  <h2 class="sec-title">Living Things</h2>
+  <p class="body-text">Slow-growing, nourishing, productive, beauty-oriented, and sustaining. They feed, store, decorate, and preserve — not rush or attack.</p>
+  <div class="list-group"><div class="list-group-title">Humans</div><div class="items-grid">
+    <div class="item-tag">Farmers, cultivators</div>
+    <div class="item-tag">Cattle rearers, dairy workers</div>
+    <div class="item-tag">Cooks, chefs</div>
+    <div class="item-tag">Bankers, accountants</div>
+    <div class="item-tag">Artists, sculptors</div>
+    <div class="item-tag">Musicians, singers</div>
+    <div class="item-tag">Fashion designers, tailors</div>
+    <div class="item-tag">Factory workers (production)</div>
+    <div class="item-tag">Business owners (asset-based)</div>
+    <div class="item-tag">Family-oriented householders</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Animals</div><div class="items-grid">
+    <div class="item-tag">Bull, cow (primary symbol)</div>
+    <div class="item-tag">Buffalo</div>
+    <div class="item-tag">Sheep</div>
+    <div class="item-tag">Goat</div>
+    <div class="item-tag">Pig</div>
+    <div class="item-tag">Elephant (slow, strong, steady)</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Birds · Insects</div><div class="items-grid">
+    <div class="item-tag">Hen</div>
+    <div class="item-tag">Duck</div>
+    <div class="item-tag">Dove</div>
+    <div class="item-tag">Bees (honey production)</div>
+    <div class="item-tag">Silkworms</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Plants &amp; Trees</div><div class="items-grid">
+    <div class="item-tag">Rice, wheat, grains</div>
+    <div class="item-tag">Crops, cultivated plants</div>
+    <div class="item-tag">Fruit-bearing trees</div>
+    <div class="item-tag">Shade-giving trees</div>
+    <div class="item-tag">Flowering plants</div>
+    <div class="item-tag">Sugarcane</div>
+    <div class="item-tag">Fodder grass</div>
+  </div></div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer II</div>
+  <h2 class="sec-title">Non-Living Things</h2>
+  <p class="body-text">Taurus non-living things support stability, material comfort, wealth, and artistic expression. They enable prosperity, beauty, and sensual enjoyment.</p>
+  <div class="list-group"><div class="list-group-title">Buildings &amp; Structures</div><div class="items-grid">
+    <div class="item-tag">Houses, palaces, bungalows</div>
+    <div class="item-tag">Gardens, parks, orchards</div>
+    <div class="item-tag">Temples and decorative structures</div>
+    <div class="item-tag">Warehouses, storage facilities</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Material Possessions</div><div class="items-grid">
+    <div class="item-tag">Jewelry, gold, silver, precious stones</div>
+    <div class="item-tag">Luxury furniture, art pieces</div>
+    <div class="item-tag">Musical instruments</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Agriculture &amp; Artistic Objects</div><div class="items-grid">
+    <div class="item-tag">Crops, grains, harvested produce</div>
+    <div class="item-tag">Land, soil, stones, minerals</div>
+    <div class="item-tag">Farming and gardening tools</div>
+    <div class="item-tag">Paintings, sculptures, handicrafts</div>
+    <div class="item-tag">Luxury fabrics, tapestries</div>
+  </div></div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer III</div>
+  <h2 class="sec-title">Both Living &amp; Non-Living — The Transition</h2>
+  <p class="body-text">Taurus represents life that sustains material wealth and value. The living form produces, nurtures, or becomes a non-living object.</p>
+  <table class="trans-table">
+    <thead><tr><th>Living Being</th><th class="arr"></th><th>Produces / Becomes</th></tr></thead>
+    <tbody>
+      <tr><td>Farmer</td><td class="arr">↔</td><td>Crops, grains</td></tr>
+      <tr><td>Dairy worker</td><td class="arr">↔</td><td>Milk, cheese, butter</td></tr>
+      <tr><td>Tailor</td><td class="arr">↔</td><td>Clothes, fabrics</td></tr>
+      <tr><td>Artist</td><td class="arr">↔</td><td>Sculptures, paintings</td></tr>
+      <tr><td>Chef</td><td class="arr">↔</td><td>Cooked food, preserved items</td></tr>
+      <tr><td>Business owner</td><td class="arr">↔</td><td>Wealth, assets</td></tr>
+      <tr><td>Cow / Buffalo</td><td class="arr">↔</td><td>Milk, ghee, dung (manure)</td></tr>
+      <tr><td>Sheep / Goat</td><td class="arr">↔</td><td>Wool, milk</td></tr>
+      <tr><td>Silkworm</td><td class="arr">↔</td><td>Silk thread</td></tr>
+      <tr><td>Bees</td><td class="arr">↔</td><td>Honey, wax</td></tr>
+      <tr><td>Sugarcane</td><td class="arr">↔</td><td>Sugar, jaggery</td></tr>
+      <tr><td>Clay</td><td class="arr">↔</td><td>Pottery</td></tr>
+      <tr><td>Flowers</td><td class="arr">↔</td><td>Garlands, perfumes</td></tr>
+    </tbody>
+  </table>
+  <div class="italic-note">Taurus bridges the animate and inanimate worlds through nourishment, craft, and material production.</div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer IV — The Invisible Realm</div>
+  <h2 class="sec-title">Neither Living Nor Non-Living</h2>
+  <p class="body-text">Taurus governs the desire, pleasure, and preservation forces behind material and living forms — principles that exist without tangible form, influencing action, wealth, and growth.</p>
+  <div class="force-section">
+    <div class="force-cat"><div class="force-cat-title">Psychological &amp; Emotional States</div><div class="force-pills"><span class="pill">Love, affection, attachment</span><span class="pill">Desire, longing, attraction</span><span class="pill">Patience, steadiness</span><span class="pill">Comfort-seeking</span><span class="pill">Contentment</span><span class="pill">Beauty appreciation</span></div></div>
+    <div class="force-cat"><div class="force-cat-title">Functional &amp; Conceptual Forces</div><div class="force-pills"><span class="pill">Stability, permanence</span><span class="pill">Material security instinct</span><span class="pill">Wealth accumulation</span><span class="pill">Preservation</span><span class="pill">Fertility &amp; growth energy</span></div></div>
+    <div class="force-cat"><div class="force-cat-title">Abstract &amp; Temporal Concepts</div><div class="force-pills"><span class="pill">Luxury as a principle</span><span class="pill">Artistic inspiration</span><span class="pill">Harmony &amp; balance</span><span class="pill">Abundance principle</span></div></div>
+  </div>
+</div>
+
+<div class="essence-box"><div class="essence-txt">Taurus governs the desire for beauty, comfort, and preservation —<br>the force that turns earth into wealth.</div></div>
+
+
+</div><!-- /page -->
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rasi Tattva – Gemini · Cancer · Leo</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:        #0a0a0a;
+  --bg2:       #111111;
+  --gold:      #c9a84c;
+  --gold-lt:   #e8c97a;
+  --white:     #f5f0e8;
+  --white-dim: rgba(245,240,232,0.7);
+  --muted:     #7a7060;
+  --border:    rgba(201,168,76,0.2);
+  --border-wk: rgba(255,255,255,0.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--white);font-family:'Cormorant Garamond',Georgia,serif;line-height:1.7;}
+.page{max-width:860px;margin:0 auto;padding:24px 20px;}
+
+.part-break{border:none;border-top:1px solid var(--border);margin:80px 0;position:relative;}
+.part-break::after{content:'✦';position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--bg);padding:0 14px;color:var(--gold);font-size:14px;}
+
+.sign-hero{text-align:center;padding:80px 20px 50px;}
+.sign-symbol{font-size:80px;line-height:1;color:var(--gold);text-shadow:0 0 40px rgba(201,168,76,0.3);margin-bottom:20px;display:block;}
+.sign-number{font-family:'Raleway',sans-serif;font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.sign-name{font-family:'Cinzel Decorative',serif;font-size:clamp(36px,8vw,68px);color:var(--gold-lt);letter-spacing:4px;line-height:1;margin-bottom:14px;}
+.sign-tagline{font-style:italic;font-weight:300;font-size:clamp(15px,2.2vw,20px);color:var(--muted);margin-bottom:28px;}
+.sign-intro{font-size:clamp(15px,2vw,17px);color:var(--white-dim);max-width:640px;margin:0 auto;line-height:1.9;}
+.eyebrow{font-family:'Raleway',sans-serif;font-size:10px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);opacity:.7;margin-bottom:18px;}
+
+.section{padding:52px 0;border-bottom:1px solid var(--border-wk);}
+.section:last-child{border-bottom:none;}
+.sec-label{font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);opacity:.65;margin-bottom:18px;}
+.sec-title{font-family:'Cinzel Decorative',serif;font-size:clamp(17px,3.2vw,26px);color:var(--gold-lt);margin-bottom:24px;line-height:1.3;}
+.body-text{font-size:clamp(15px,1.9vw,17px);color:var(--white-dim);line-height:1.95;margin-bottom:18px;}
+.italic-note{font-style:italic;font-weight:300;font-size:clamp(16px,2.2vw,19px);color:var(--gold-lt);border-left:2px solid var(--gold);padding:12px 0 12px 20px;margin:24px 0;opacity:.9;}
+
+.core-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin:24px 0;}
+.core-cell{background:var(--bg2);padding:16px 14px;}
+.core-lbl{font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);opacity:.55;margin-bottom:6px;}
+.core-val{font-size:15px;color:var(--white);}
+
+.tattva-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:24px 0;}
+.tattva-card{border:1px solid var(--border);padding:18px 16px;background:rgba(201,168,76,0.03);}
+.tattva-lbl{font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);opacity:.55;margin-bottom:7px;}
+.tattva-val{font-size:14px;color:var(--white-dim);line-height:1.55;}
+
+.cond-box{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0;}
+@media(max-width:480px){.cond-box{grid-template-columns:1fr;}}
+.cond-card{padding:18px;border:1px solid var(--border);}
+.cond-card.weak{border-left:3px solid rgba(255,255,255,0.2);}
+.cond-card.strong{border-left:3px solid var(--gold);}
+.cond-lbl{font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;opacity:.6;margin-bottom:8px;}
+.cond-card.weak .cond-lbl{color:var(--white);}
+.cond-card.strong .cond-lbl{color:var(--gold);}
+.cond-txt{font-size:14px;color:var(--white-dim);line-height:1.7;}
+
+.list-group{margin:22px 0;}
+.list-group-title{font-family:'Cinzel Decorative',serif;font-size:12px;color:var(--gold-lt);letter-spacing:1px;margin-bottom:12px;padding-bottom:7px;border-bottom:1px solid rgba(201,168,76,0.12);}
+.items-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px;}
+.item-tag{display:flex;align-items:flex-start;gap:9px;font-size:14px;color:var(--white-dim);line-height:1.5;padding:5px 0;}
+.item-tag::before{content:'▸';color:var(--gold);font-size:9px;margin-top:4px;flex-shrink:0;opacity:.6;}
+
+.trans-table{width:100%;border-collapse:collapse;margin:22px 0;font-size:14px;}
+.trans-table th{font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);opacity:.6;padding:11px 14px;text-align:left;border-bottom:1px solid var(--border);background:rgba(201,168,76,0.04);}
+.trans-table td{padding:10px 14px;border-bottom:1px solid var(--border-wk);color:var(--white-dim);vertical-align:top;}
+.trans-table tr:hover td{background:rgba(201,168,76,0.04);}
+.arr{color:var(--gold);opacity:.4;text-align:center;width:36px;}
+
+.force-section{margin:22px 0;}
+.force-cat{margin-bottom:22px;}
+.force-cat-title{font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);opacity:.55;margin-bottom:12px;}
+.force-pills{display:flex;flex-wrap:wrap;gap:8px;}
+.pill{padding:5px 14px;border:1px solid var(--border);font-size:13px;color:var(--white-dim);background:rgba(201,168,76,0.04);}
+
+.essence-box{text-align:center;padding:44px 28px;border:1px solid var(--border);margin:44px 0;background:rgba(201,168,76,0.03);position:relative;}
+.essence-box::before{content:'ONE-LINE ESSENCE';position:absolute;top:-9px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--bg);padding:0 14px;font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:4px;color:var(--gold);opacity:.7;}
+.essence-txt{font-family:'Cinzel Decorative',serif;font-size:clamp(13px,2.2vw,18px);color:var(--gold-lt);line-height:1.7;}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ████████████████████████████████████████
+     GEMINI — Sign 03
+████████████████████████████████████████ -->
+
+<div class="sign-hero">
+  <div class="eyebrow">Rasi Tattva · Sign 03</div>
+  <span class="sign-symbol">♊</span>
+  <div class="sign-number">Dual · Air · Ruled by Mercury · Kama Rasi</div>
+  <h2 class="sign-name">Gemini</h2>
+  <p class="sign-tagline">Mithunam — The Twins — The Messenger of the Zodiac</p>
+  <p class="sign-intro">A Dual Air sign ruled by Mercury. Gemini represents communication, intellect, learning, networking, curiosity, trade, and duality — living beings associated with communication, intelligence, adaptability, and social interaction.</p>
+</div>
+
+<div class="section">
+  <div class="sec-label">Core Nature</div>
+  <h2 class="sec-title">Fundamental Qualities</h2>
+  <div class="core-grid">
+    <div class="core-cell"><div class="core-lbl">Rasi Type</div><div class="core-val">Dual / Mutable Sign</div></div>
+    <div class="core-cell"><div class="core-lbl">Element</div><div class="core-val">Air</div></div>
+    <div class="core-cell"><div class="core-lbl">Gender</div><div class="core-val">Male</div></div>
+    <div class="core-cell"><div class="core-lbl">Ruling Planet</div><div class="core-val">Mercury</div></div>
+    <div class="core-cell"><div class="core-lbl">Direction</div><div class="core-val">West</div></div>
+    <div class="core-cell"><div class="core-lbl">Life Class</div><div class="core-val">Kama Rasi</div></div>
+    <div class="core-cell"><div class="core-lbl">Varna</div><div class="core-val">Shudra</div></div>
+    <div class="core-cell"><div class="core-lbl">Body Parts</div><div class="core-val">Neck · Shoulders</div></div>
+    <div class="core-cell"><div class="core-lbl">Life-form</div><div class="core-val">Two-legged (Human)</div></div>
+    <div class="core-cell"><div class="core-lbl">Symbol</div><div class="core-val">The Twins</div></div>
+  </div>
+  <div class="italic-note">Communication, enjoyment, learning, social interaction — Gemini connects and exchanges, but does not sustain for long.</div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Eight-Dimensional Tattva</div>
+  <h2 class="sec-title">Life Force to Shadow</h2>
+  <div class="tattva-grid">
+    <div class="tattva-card"><div class="tattva-lbl">Life Force</div><div class="tattva-val">Light, nervous, quickly changing energy</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Matter</div><div class="tattva-val">Books, writing tools, media, technology, trade items</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Fame</div><div class="tattva-val">Wit, intelligence, communication skills</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Mind</div><div class="tattva-val">Fast, analytical, multitasking nature</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Action</div><div class="tattva-val">Communication-driven, flexible execution</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Purpose</div><div class="tattva-val">Exchange of information, learning, enjoyment</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Time</div><div class="tattva-val">Rapid changes, short cycles, frequent shifts</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Shadow</div><div class="tattva-val">Restlessness, inconsistency, superficial focus</div></div>
+  </div>
+  <div class="cond-box">
+    <div class="cond-card weak"><div class="cond-lbl">If Mercury is Weak</div><div class="cond-txt">Confusion, gossip, anxiety. The mind scatters without producing meaningful communication or exchange.</div></div>
+    <div class="cond-card strong"><div class="cond-lbl">If Mercury is Strong</div><div class="cond-txt">Intelligence, articulation, versatility. The communicator who bridges worlds with clarity and wit.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer I</div>
+  <h2 class="sec-title">Living Things</h2>
+  <p class="body-text">Adaptable, communicative, intelligent, curious, and social — they connect, exchange information, learn, or teach.</p>
+  <div class="list-group"><div class="list-group-title">Humans</div><div class="items-grid">
+    <div class="item-tag">Teachers, scholars, writers</div>
+    <div class="item-tag">Journalists, reporters</div>
+    <div class="item-tag">Traders, merchants, shopkeepers</div>
+    <div class="item-tag">Messengers, postal workers, couriers</div>
+    <div class="item-tag">Students, learners, researchers</div>
+    <div class="item-tag">Orators, public speakers</div>
+    <div class="item-tag">Siblings, twins (duality symbol)</div>
+    <div class="item-tag">Call centre, social media workers</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Animals · Birds · Insects</div><div class="items-grid">
+    <div class="item-tag">Monkeys (curious, agile, social)</div>
+    <div class="item-tag">Parrots (talkative, mimicking)</div>
+    <div class="item-tag">Small social mammals (rabbits, squirrels)</div>
+    <div class="item-tag">Mynahs, crows (communicators)</div>
+    <div class="item-tag">Pigeons (messengers)</div>
+    <div class="item-tag">Bees (social, communicative)</div>
+    <div class="item-tag">Ants (organized social structure)</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Plants</div><div class="items-grid">
+    <div class="item-tag">Climbing plants, vines (adaptable)</div>
+    <div class="item-tag">Palm-leaf trees (writing history)</div>
+    <div class="item-tag">Paper-yielding plants</div>
+  </div></div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer II</div>
+  <h2 class="sec-title">Non-Living Things</h2>
+  <p class="body-text">Gemini non-living things facilitate communication, information exchange, learning, trade, and duality. They are flexible and intellectual in function.</p>
+  <div class="list-group"><div class="list-group-title">Writing &amp; Learning Tools</div><div class="items-grid">
+    <div class="item-tag">Books, notebooks, journals</div>
+    <div class="item-tag">Pens, pencils, quills</div>
+    <div class="item-tag">Computers, laptops, tablets</div>
+    <div class="item-tag">Newspapers, research papers</div>
+    <div class="item-tag">Libraries, study materials</div>
+    <div class="item-tag">Blackboards, whiteboards</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Communication &amp; Trade Tools</div><div class="items-grid">
+    <div class="item-tag">Phones, mobiles, telegraph devices</div>
+    <div class="item-tag">Messaging apps, call centre equipment</div>
+    <div class="item-tag">Trading ledgers, invoices, bills</div>
+    <div class="item-tag">Market stalls, shops, counters</div>
+    <div class="item-tag">Letters, packages, parcels</div>
+    <div class="item-tag">Maps, travel guides</div>
+    <div class="item-tag">Scissors, balance scales (dual-purpose)</div>
+  </div></div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer III</div>
+  <h2 class="sec-title">Both Living &amp; Non-Living — The Transition</h2>
+  <p class="body-text">Gemini represents living intelligence that produces communication, information, and trade objects. It bridges animate intelligence with the tools of expression and exchange.</p>
+  <table class="trans-table">
+    <thead><tr><th>Living Being</th><th class="arr"></th><th>Produces / Becomes</th></tr></thead>
+    <tbody>
+      <tr><td>Writer</td><td class="arr">↔</td><td>Books, articles, journals</td></tr>
+      <tr><td>Teacher / Scholar</td><td class="arr">↔</td><td>Notes, study materials, lectures</td></tr>
+      <tr><td>Trader / Merchant</td><td class="arr">↔</td><td>Ledgers, invoices, merchandise</td></tr>
+      <tr><td>Messenger</td><td class="arr">↔</td><td>Letters, packages</td></tr>
+      <tr><td>Researcher</td><td class="arr">↔</td><td>Papers, experiments, reports</td></tr>
+      <tr><td>Parrots, mynahs</td><td class="arr">↔</td><td>Message symbolism</td></tr>
+      <tr><td>Palm trees</td><td class="arr">↔</td><td>Palm-leaf manuscripts</td></tr>
+      <tr><td>Climbing plants</td><td class="arr">↔</td><td>Fiber, ropes, paper material</td></tr>
+    </tbody>
+  </table>
+  <div class="italic-note">Gemini bridges animate intelligence with the tools of expression and exchange.</div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer IV — The Invisible Realm</div>
+  <h2 class="sec-title">Neither Living Nor Non-Living</h2>
+  <p class="body-text">Gemini governs the intangible principles of intellect, communication, and adaptability — existing without being physical objects or living beings, yet influencing all learning and exchange.</p>
+  <div class="force-section">
+    <div class="force-cat"><div class="force-cat-title">Mental &amp; Intellectual Forces</div><div class="force-pills"><span class="pill">Intelligence, reasoning</span><span class="pill">Analytical mind</span><span class="pill">Curiosity, inquiry</span><span class="pill">Quick thinking</span><span class="pill">Memory, learning capacity</span><span class="pill">Knowledge-seeking instinct</span></div></div>
+    <div class="force-cat"><div class="force-cat-title">Communication &amp; Expression</div><div class="force-pills"><span class="pill">Speech, conversation</span><span class="pill">Debate</span><span class="pill">Writing, expression of ideas</span><span class="pill">Information flow</span><span class="pill">Persuasion, negotiation</span><span class="pill">Networking</span></div></div>
+    <div class="force-cat"><div class="force-cat-title">Functional &amp; Abstract Concepts</div><div class="force-pills"><span class="pill">Duality, versatility</span><span class="pill">Multitasking</span><span class="pill">Decision-making principle</span><span class="pill">Trade concept</span><span class="pill">Travel of ideas</span><span class="pill">Mental agility</span></div></div>
+  </div>
+</div>
+
+<div class="essence-box"><div class="essence-txt">Gemini governs the intangible flow of intellect and communication —<br>the invisible thread that connects all minds.</div></div>
+
+<hr class="part-break">
+
+<!-- ████████████████████████████████████████
+     CANCER — Sign 04
+████████████████████████████████████████ -->
+
+<div class="sign-hero">
+  <div class="eyebrow">Rasi Tattva · Sign 04</div>
+  <span class="sign-symbol">♋</span>
+  <div class="sign-number">Movable · Water · Ruled by Moon · Salvation Rasi</div>
+  <h2 class="sign-name">Cancer</h2>
+  <p class="sign-tagline">Kadagam — The Crab — The Emotional Foundation of the Zodiac</p>
+  <p class="sign-intro">A Movable Water sign ruled by the Moon. Cancer represents emotions, nurturing, home, family, protection, fertility, and care — living beings that nurture, protect, care, or sustain emotionally and physically.</p>
+</div>
+
+<div class="section">
+  <div class="sec-label">Core Nature</div>
+  <h2 class="sec-title">Fundamental Qualities</h2>
+  <div class="core-grid">
+    <div class="core-cell"><div class="core-lbl">Rasi Type</div><div class="core-val">Movable Sign</div></div>
+    <div class="core-cell"><div class="core-lbl">Element</div><div class="core-val">Water</div></div>
+    <div class="core-cell"><div class="core-lbl">Gender</div><div class="core-val">Female</div></div>
+    <div class="core-cell"><div class="core-lbl">Ruling Planet</div><div class="core-val">Moon</div></div>
+    <div class="core-cell"><div class="core-lbl">Direction</div><div class="core-val">North</div></div>
+    <div class="core-cell"><div class="core-lbl">Life Class</div><div class="core-val">Salvation Rasi</div></div>
+    <div class="core-cell"><div class="core-lbl">Varna</div><div class="core-val">Brahmin</div></div>
+    <div class="core-cell"><div class="core-lbl">Body Parts</div><div class="core-val">Upper Chest · Lungs</div></div>
+    <div class="core-cell"><div class="core-lbl">Life-form</div><div class="core-val">Eight-legged (Crab)</div></div>
+    <div class="core-cell"><div class="core-lbl">Symbol</div><div class="core-val">The Crab</div></div>
+  </div>
+  <div class="italic-note">Liberation, emotional security, inner peace, spiritual grounding — Cancer absorbs before it acts.</div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Eight-Dimensional Tattva</div>
+  <h2 class="sec-title">Life Force to Shadow</h2>
+  <div class="tattva-grid">
+    <div class="tattva-card"><div class="tattva-lbl">Life Force</div><div class="tattva-val">Deep, fluctuating, emotionally driven vitality</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Matter</div><div class="tattva-val">Water sources, containers, homes, food storage</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Fame</div><div class="tattva-val">Compassion, emotional reliability, caretaking</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Mind</div><div class="tattva-val">Intuitive, memory-based, emotionally responsive</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Action</div><div class="tattva-val">Protective, indirect, adaptive responses</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Purpose</div><div class="tattva-val">Emotional fulfillment, care, inner security</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Time</div><div class="tattva-val">Cyclical, lunar-phase based timing</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Shadow</div><div class="tattva-val">Mood swings, over-attachment, insecurity</div></div>
+  </div>
+  <div class="cond-box">
+    <div class="cond-card weak"><div class="cond-lbl">If Moon is Weak</div><div class="cond-txt">Fear, instability, emotional confusion. The protective shell becomes a prison rather than sanctuary.</div></div>
+    <div class="cond-card strong"><div class="cond-lbl">If Moon is Strong</div><div class="cond-txt">Intuition, compassion, spiritual maturity. The nurturer who holds space for all who need care.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer I</div>
+  <h2 class="sec-title">Living Things</h2>
+  <p class="body-text">Nurturing, protective, emotionally intelligent, home- and family-oriented. They care, sustain, and preserve life.</p>
+  <div class="list-group"><div class="list-group-title">Humans</div><div class="items-grid">
+    <div class="item-tag">Mothers, caregivers, nurses</div>
+    <div class="item-tag">Teachers with emotional guidance</div>
+    <div class="item-tag">Chefs, cooks (home-focused)</div>
+    <div class="item-tag">Guardians, protectors, housekeepers</div>
+    <div class="item-tag">Children (sensitivity, nurturing)</div>
+    <div class="item-tag">Social workers, counselors, psychologists</div>
+    <div class="item-tag">Family-oriented householders</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Animals · Birds · Insects</div><div class="items-grid">
+    <div class="item-tag">Crab (primary symbol)</div>
+    <div class="item-tag">Tortoise / Turtle (protective shell)</div>
+    <div class="item-tag">Cow (nurturing, milk-producing)</div>
+    <div class="item-tag">Dogs (loyal, protective pets)</div>
+    <div class="item-tag">Swans, ducks, pigeons (family-oriented)</div>
+    <div class="item-tag">Ants (family-focused colony)</div>
+    <div class="item-tag">Bees (hive community)</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Plants &amp; Trees</div><div class="items-grid">
+    <div class="item-tag">Coconut tree (life-sustaining)</div>
+    <div class="item-tag">Lotus (emotional, spiritual)</div>
+    <div class="item-tag">Fruit-bearing trees for family nutrition</div>
+    <div class="item-tag">Creepers and vines near water</div>
+  </div></div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer II</div>
+  <h2 class="sec-title">Non-Living Things</h2>
+  <p class="body-text">Cancer non-living things protect, nurture, store, and sustain. They are soft, fluid, protective, and home-centric.</p>
+  <div class="list-group"><div class="list-group-title">Household &amp; Shelter</div><div class="items-grid">
+    <div class="item-tag">Houses, huts, cottages</div>
+    <div class="item-tag">Walls, gates, fences</div>
+    <div class="item-tag">Beds, mattresses, pillows, blankets</div>
+    <div class="item-tag">Kitchens, cooking vessels, utensils</div>
+    <div class="item-tag">Granaries, cupboards, food storage</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Water &amp; Spiritual Objects</div><div class="items-grid">
+    <div class="item-tag">Ponds, lakes, wells, water tanks</div>
+    <div class="item-tag">Milk, dairy storage containers</div>
+    <div class="item-tag">Boats, rafts, floating tools</div>
+    <div class="item-tag">Altars, shrines, sacred water sources</div>
+    <div class="item-tag">Moonstone, water-associated stones</div>
+    <div class="item-tag">Family heirlooms, memorabilia</div>
+    <div class="item-tag">Shells, protective amulets</div>
+  </div></div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer III</div>
+  <h2 class="sec-title">Both Living &amp; Non-Living — The Transition</h2>
+  <p class="body-text">Cancer represents living beings that nurture, protect, and produce sustenance or protective objects. It connects care and nourishment with tangible outputs.</p>
+  <table class="trans-table">
+    <thead><tr><th>Living Being</th><th class="arr"></th><th>Produces / Becomes</th></tr></thead>
+    <tbody>
+      <tr><td>Mothers / Cooks</td><td class="arr">↔</td><td>Food, dairy products (milk, butter, cream)</td></tr>
+      <tr><td>Caregivers / Nurses</td><td class="arr">↔</td><td>Medical tools, remedies</td></tr>
+      <tr><td>Teachers / Mentors</td><td class="arr">↔</td><td>Notes, learning materials</td></tr>
+      <tr><td>Guardians</td><td class="arr">↔</td><td>Protective tools, home security items</td></tr>
+      <tr><td>Householders</td><td class="arr">↔</td><td>Furniture, stored food, heirlooms</td></tr>
+      <tr><td>Cow</td><td class="arr">↔</td><td>Milk, ghee, butter</td></tr>
+      <tr><td>Crab</td><td class="arr">↔</td><td>Shell ornaments, symbolic items</td></tr>
+      <tr><td>Coconut tree</td><td class="arr">↔</td><td>Coconut, oil, coir products</td></tr>
+      <tr><td>Fruit trees</td><td class="arr">↔</td><td>Fruits, jams, preserves</td></tr>
+      <tr><td>Lotus</td><td class="arr">↔</td><td>Decorative, ritual items</td></tr>
+    </tbody>
+  </table>
+  <div class="italic-note">Cancer connects care and nourishment with tangible, protective outputs.</div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer IV — The Invisible Realm</div>
+  <h2 class="sec-title">Neither Living Nor Non-Living</h2>
+  <p class="body-text">Cancer governs invisible nurturing and protective forces — principles influencing emotions, home, family, and sustenance without being tangible beings or objects.</p>
+  <div class="force-section">
+    <div class="force-cat"><div class="force-cat-title">Emotional &amp; Psychological Forces</div><div class="force-pills"><span class="pill">Love, care, affection</span><span class="pill">Nurturing instinct</span><span class="pill">Compassion, empathy</span><span class="pill">Attachment to family</span><span class="pill">Sensitivity</span><span class="pill">Emotional security</span></div></div>
+    <div class="force-cat"><div class="force-cat-title">Functional &amp; Conceptual Principles</div><div class="force-pills"><span class="pill">Protection, sheltering</span><span class="pill">Preservation, sustenance</span><span class="pill">Fertility energy</span><span class="pill">Intuition, psychic awareness</span><span class="pill">Emotional bonding</span></div></div>
+    <div class="force-cat"><div class="force-cat-title">Temporal &amp; Symbolic Concepts</div><div class="force-pills"><span class="pill">Moon cycles, rhythm of life</span><span class="pill">Night, calm, reflection</span><span class="pill">Inner nourishment</span><span class="pill">Mental peace</span><span class="pill">Family as an energy field</span></div></div>
+  </div>
+</div>
+
+<div class="essence-box"><div class="essence-txt">Cancer governs the invisible force of nurturing —<br>the protective shell that makes growth possible.</div></div>
+
+<hr class="part-break">
+
+<!-- ████████████████████████████████████████
+     LEO — Sign 05
+████████████████████████████████████████ -->
+
+<div class="sign-hero">
+  <div class="eyebrow">Rasi Tattva · Sign 05</div>
+  <span class="sign-symbol">♌</span>
+  <div class="sign-number">Fixed · Fire · Ruled by Sun · Dharma Rasi</div>
+  <h2 class="sign-name">Leo</h2>
+  <p class="sign-tagline">Simmam — The Lion — The Central Power of the Zodiac</p>
+  <p class="sign-intro">A Fixed Fire sign ruled by the Sun. Leo represents power, leadership, authority, pride, courage, vitality, and royalty — living beings that lead, dominate, protect, or radiate energy and authority.</p>
+</div>
+
+<div class="section">
+  <div class="sec-label">Core Nature</div>
+  <h2 class="sec-title">Fundamental Qualities</h2>
+  <div class="core-grid">
+    <div class="core-cell"><div class="core-lbl">Rasi Type</div><div class="core-val">Fixed Sign</div></div>
+    <div class="core-cell"><div class="core-lbl">Element</div><div class="core-val">Fire</div></div>
+    <div class="core-cell"><div class="core-lbl">Gender</div><div class="core-val">Male</div></div>
+    <div class="core-cell"><div class="core-lbl">Ruling Planet</div><div class="core-val">Sun</div></div>
+    <div class="core-cell"><div class="core-lbl">Direction</div><div class="core-val">East</div></div>
+    <div class="core-cell"><div class="core-lbl">Life Class</div><div class="core-val">Dharma Rasi</div></div>
+    <div class="core-cell"><div class="core-lbl">Varna</div><div class="core-val">Kshatriya</div></div>
+    <div class="core-cell"><div class="core-lbl">Body Parts</div><div class="core-val">Heart · Chest</div></div>
+    <div class="core-cell"><div class="core-lbl">Life-form</div><div class="core-val">Four-legged (Lion)</div></div>
+    <div class="core-cell"><div class="core-lbl">Symbol</div><div class="core-val">The Lion</div></div>
+  </div>
+  <div class="italic-note">Duty, righteousness, leadership through responsibility — Leo rules naturally, not by force but by presence.</div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Eight-Dimensional Tattva</div>
+  <h2 class="sec-title">Life Force to Shadow</h2>
+  <div class="tattva-grid">
+    <div class="tattva-card"><div class="tattva-lbl">Life Force</div><div class="tattva-val">Powerful, radiant, commanding vitality</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Matter</div><div class="tattva-val">Gold, throne, government symbols, authority assets</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Fame</div><div class="tattva-val">Honor, recognition, royal reputation</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Mind</div><div class="tattva-val">Proud, decisive, self-assured thinking</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Action</div><div class="tattva-val">Commanding, protective, authoritative action</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Purpose</div><div class="tattva-val">Upholding dharma through leadership and example</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Time</div><div class="tattva-val">Stable authority with long-lasting impact</div></div>
+    <div class="tattva-card"><div class="tattva-lbl">Shadow</div><div class="tattva-val">Ego, arrogance, dominance issues</div></div>
+  </div>
+  <div class="cond-box">
+    <div class="cond-card weak"><div class="cond-lbl">If Sun is Weak</div><div class="cond-txt">Loss of confidence, lack of recognition. The king without a kingdom — authority without presence.</div></div>
+    <div class="cond-card strong"><div class="cond-lbl">If Sun is Strong</div><div class="cond-txt">Leadership, fame, moral authority. The natural centre around which all others orbit.</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer I</div>
+  <h2 class="sec-title">Living Things</h2>
+  <p class="body-text">Regal, dominant, courageous, authoritative, and central in their domain. They lead, protect, and radiate energy.</p>
+  <div class="list-group"><div class="list-group-title">Humans</div><div class="items-grid">
+    <div class="item-tag">Kings, rulers, emperors</div>
+    <div class="item-tag">Leaders, CEOs, commanders</div>
+    <div class="item-tag">Warriors, elite soldiers</div>
+    <div class="item-tag">Coaches, mentors with authority</div>
+    <div class="item-tag">Performers, actors in spotlight</div>
+    <div class="item-tag">Bold, courageous individuals</div>
+    <div class="item-tag">Children with dominant personalities</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Animals · Birds · Insects</div><div class="items-grid">
+    <div class="item-tag">Lion (primary symbol)</div>
+    <div class="item-tag">Tiger (predatory, regal)</div>
+    <div class="item-tag">Leopard / Cheetah</div>
+    <div class="item-tag">Horse (regal, war association)</div>
+    <div class="item-tag">Elephant (leadership, royal symbolism)</div>
+    <div class="item-tag">Eagle (king of birds)</div>
+    <div class="item-tag">Peacock (royal, prideful display)</div>
+    <div class="item-tag">Falcon / Hawk (predatory, dominant)</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Plants &amp; Trees</div><div class="items-grid">
+    <div class="item-tag">Banyan, Peepal (large, majestic)</div>
+    <div class="item-tag">Sunflower (follows Sun, prominent)</div>
+    <div class="item-tag">Mango, Jackfruit (dominant fruit trees)</div>
+  </div></div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer II</div>
+  <h2 class="sec-title">Non-Living Things</h2>
+  <p class="body-text">Leo non-living things symbolize authority, dominance, energy, and visibility. They support leadership, pride, and centrality.</p>
+  <div class="list-group"><div class="list-group-title">Royal &amp; Authority Objects</div><div class="items-grid">
+    <div class="item-tag">Thrones, royal chairs</div>
+    <div class="item-tag">Crowns, tiaras</div>
+    <div class="item-tag">Scepters, ceremonial staffs</div>
+    <div class="item-tag">Castles, palaces, fortresses</div>
+    <div class="item-tag">Flags, banners, symbols of power</div>
+    <div class="item-tag">Official seals, emblems, insignia</div>
+  </div></div>
+  <div class="list-group"><div class="list-group-title">Fire, War &amp; Fame Objects</div><div class="items-grid">
+    <div class="item-tag">Lamps, torches, ceremonial flames</div>
+    <div class="item-tag">Solar instruments, spotlights</div>
+    <div class="item-tag">Swords, shields, armor (leader's weapons)</div>
+    <div class="item-tag">Chariots, vehicles of leadership</div>
+    <div class="item-tag">Stages, auditoriums</div>
+    <div class="item-tag">Awards, trophies, statues</div>
+  </div></div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer III</div>
+  <h2 class="sec-title">Both Living &amp; Non-Living — The Transition</h2>
+  <p class="body-text">Leo represents living beings that embody power, leadership, and authority — and the objects they create or inspire as symbols of prestige and energy.</p>
+  <table class="trans-table">
+    <thead><tr><th>Living Being</th><th class="arr"></th><th>Produces / Becomes</th></tr></thead>
+    <tbody>
+      <tr><td>Kings / Leaders</td><td class="arr">↔</td><td>Thrones, royal regalia, emblems</td></tr>
+      <tr><td>Warriors / Commanders</td><td class="arr">↔</td><td>Weapons, armor</td></tr>
+      <tr><td>Performers / Artists</td><td class="arr">↔</td><td>Stage props, awards, instruments</td></tr>
+      <tr><td>Coaches / Mentors</td><td class="arr">↔</td><td>Training equipment, trophies</td></tr>
+      <tr><td>Lions / Tigers</td><td class="arr">↔</td><td>Skins, trophies, ceremonial symbols</td></tr>
+      <tr><td>Horses</td><td class="arr">↔</td><td>Chariots, saddles, war equipment</td></tr>
+      <tr><td>Peacock</td><td class="arr">↔</td><td>Decorative feathers, art symbolism</td></tr>
+      <tr><td>Banyan tree</td><td class="arr">↔</td><td>Wood for ceremonial objects</td></tr>
+      <tr><td>Sunflower</td><td class="arr">↔</td><td>Decorative or ritual objects</td></tr>
+    </tbody>
+  </table>
+  <div class="italic-note">Leo connects vitality and central dominance with tangible symbols of prestige and energy.</div>
+</div>
+
+<div class="section">
+  <div class="sec-label">Layer IV — The Invisible Realm</div>
+  <h2 class="sec-title">Neither Living Nor Non-Living</h2>
+  <p class="body-text">Leo governs invisible Sun-like principles of authority, energy, and leadership — forces that shape action, dominance, and influence without taking physical form.</p>
+  <div class="force-section">
+    <div class="force-cat"><div class="force-cat-title">Vital &amp; Psychological Forces</div><div class="force-pills"><span class="pill">Life force, vitality, prana</span><span class="pill">Courage, confidence, boldness</span><span class="pill">Ego, self-expression</span><span class="pill">Pride</span><span class="pill">Determination</span><span class="pill">Willpower</span></div></div>
+    <div class="force-cat"><div class="force-cat-title">Leadership &amp; Functional Principles</div><div class="force-pills"><span class="pill">Authority, governance</span><span class="pill">Centrality</span><span class="pill">Command</span><span class="pill">Guidance, mentorship</span><span class="pill">Influence and inspiration</span><span class="pill">Strategic thinking</span></div></div>
+    <div class="force-cat"><div class="force-cat-title">Temporal &amp; Symbolic Concepts</div><div class="force-pills"><span class="pill">Day, sunlight, illumination</span><span class="pill">Energy flow, radiance</span><span class="pill">Glory, fame, recognition</span><span class="pill">Creativity, performance</span><span class="pill">Excellence</span></div></div>
+  </div>
+</div>
+
+<div class="essence-box"><div class="essence-txt">Leo governs the invisible Sun-like authority —<br>the force that makes others naturally follow.</div></div>
+
+</div><!-- /page -->
+</body>
+</html>
